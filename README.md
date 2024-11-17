@@ -10,9 +10,9 @@
 - Custom response with **400X** error.
 
 ### Available Features
--[x] Build with **Docker**/**Docker Compose**.
--[x] Entity transfer **DTO**.
--[x] Proxy config.
+- [x] Build with **Docker**/**Docker Compose**.
+- [x] Entity transfer **DTO**.
+- [x] Proxy config.
 -[] Deploy to pipeline production config.
 -[] Deploy to pipeline staging config.
 
