@@ -1,0 +1,31 @@
+version: "3.11"
+
+services:
+  mockup-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5555:5555
+    networks:
+      - default
+    # volumes:
+      # - /etc/letsencrypt/live/api.xxx.vn/fullchain.pem:/etc/nginx/ssl/cert.pem
+      # - /etc/letsencrypt/live/api.xxx.vn/privkey.pem:/etc/nginx/ssl/private.pem 
+
+
+  proxy:
+    build: ./proxy
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      # - /etc/letsencrypt/live/api.xxx.vn/fullchain.pem:/etc/nginx/ssl/cert.pem
+      # - /etc/letsencrypt/live/api.xxx.vn/privkey.pem:/etc/nginx/ssl/private.pem 
+    networks:
+      - default 
+  
+networks:
+  default:
+    driver: bridge
