@@ -10,11 +10,11 @@
 - Custom response with **400X** error.
 
 ### Available Features
-- [x] Build with **Docker**/**Docker Compose**.
-- [x] Entity transfer **DTO**.
-- [x] Proxy config.
-- [] Deploy to pipeline production config.
-- [] Deploy to pipeline staging config.
+-[x] Build with **Docker**/**Docker Compose**.
+-[x] Entity transfer **DTO**.
+-[x] Proxy config.
+-[] Deploy to pipeline production config.
+-[] Deploy to pipeline staging config.
 
 ### **Installation**
 **Config with Anaconda** (By pass if use python 3.10/3.11 native in local computer)
